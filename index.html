@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Personal portfolio for an Electronics & Computer Engineering student."
+    />
+    <title>Your Name | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              accent: "#4f46e5",
+            },
+            boxShadow: {
+              soft: "0 10px 30px rgba(17, 24, 39, 0.08)",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="./styles/custom.css" />
+  </head>
+  <body class="bg-white text-gray-900 antialiased">
+    <header
+      id="site-header"
+      class="fixed top-0 left-0 right-0 z-50 border-b border-transparent bg-white/80 backdrop-blur-sm transition-all duration-300"
+    >
+      <nav
+        class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-8"
+        aria-label="Main navigation"
+      >
+        <a href="#home" class="text-lg font-semibold tracking-tight">Your Name</a>
+        <button
+          id="menu-toggle"
+          class="inline-flex items-center justify-center rounded-md border border-gray-300 p-2 text-gray-700 md:hidden"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path
+              fill-rule="evenodd"
+              d="M3 4.75A.75.75 0 013.75 4h12.5a.75.75 0 010 1.5H3.75A.75.75 0 013 4.75zm0 5A.75.75 0 013.75 9h12.5a.75.75 0 010 1.5H3.75A.75.75 0 013 9.75zm0 5a.75.75 0 01.75-.75h12.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </button>
+        <ul id="nav-menu" class="hidden items-center gap-8 text-sm font-medium md:flex">
+          <li><a class="nav-link" href="#home">Home</a></li>
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#skills">Skills</a></li>
+          <li><a class="nav-link" href="#projects">Projects</a></li>
+          <li><a class="nav-link" href="#resume">Resume</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div id="mobile-menu" class="hidden border-t border-gray-200 bg-white md:hidden">
+        <ul class="space-y-1 px-6 py-3 text-sm font-medium">
+          <li><a class="nav-link block py-2" href="#home">Home</a></li>
+          <li><a class="nav-link block py-2" href="#about">About</a></li>
+          <li><a class="nav-link block py-2" href="#skills">Skills</a></li>
+          <li><a class="nav-link block py-2" href="#projects">Projects</a></li>
+          <li><a class="nav-link block py-2" href="#resume">Resume</a></li>
+          <li><a class="nav-link block py-2" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section
+        id="home"
+        class="mx-auto flex min-h-screen max-w-6xl items-center px-6 pt-28 pb-16 lg:px-8"
+      >
+        <div class="max-w-3xl space-y-8 reveal">
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-gray-500">Portfolio</p>
+          <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
+            Your Name
+          </h1>
+          <h2 class="text-xl text-gray-700 sm:text-2xl">
+            Electronics &amp; Computer Engineering Student
+          </h2>
+          <p class="max-w-2xl text-base leading-relaxed text-gray-600 sm:text-lg">
+            I design and build practical systems where embedded hardware and software work together,
+            focusing on reliability, clarity, and measurable impact.
+          </p>
+          <a
+            href="#projects"
+            class="inline-flex items-center rounded-full bg-gray-900 px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
+          >
+            View Projects
+          </a>
+        </div>
+      </section>
+
+      <section id="about" class="section-spacing bg-gray-50">
+        <div class="mx-auto max-w-6xl px-6 lg:px-8">
+          <div class="max-w-3xl reveal">
+            <h2 class="section-title">About</h2>
+            <p class="mt-6 text-base leading-relaxed text-gray-700 sm:text-lg">
+              I am an engineering student focused on building efficient digital solutions across
+              electronics, programming, and system-level design. My work combines hardware
+              prototyping, algorithmic problem solving, and software development to create solutions
+              that are practical, scalable, and user-oriented.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section-spacing">
+        <div class="mx-auto max-w-6xl px-6 lg:px-8">
+          <div class="reveal">
+            <h2 class="section-title">Skills</h2>
+            <div class="mt-10 grid gap-6 md:grid-cols-3">
+              <article class="skill-card">
+                <h3 class="skill-title">Programming</h3>
+                <ul class="mt-4 flex flex-wrap gap-2">
+                  <li class="skill-pill">C</li>
+                  <li class="skill-pill">C#</li>
+                  <li class="skill-pill">Java</li>
+                  <li class="skill-pill">Verilog</li>
+                </ul>
+              </article>
+              <article class="skill-card">
+                <h3 class="skill-title">Hardware</h3>
+                <ul class="mt-4 flex flex-wrap gap-2">
+                  <li class="skill-pill">Arduino</li>
+                  <li class="skill-pill">Sensors</li>
+                  <li class="skill-pill">Circuit Design</li>
+                </ul>
+              </article>
+              <article class="skill-card">
+                <h3 class="skill-title">Tools</h3>
+                <ul class="mt-4 flex flex-wrap gap-2">
+                  <li class="skill-pill">Proteus</li>
+                  <li class="skill-pill">MATLAB</li>
+                  <li class="skill-pill">Git</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section-spacing bg-gray-50">
+        <div class="mx-auto max-w-6xl px-6 lg:px-8">
+          <div class="reveal">
+            <h2 class="section-title">Projects</h2>
+            <p class="mt-4 max-w-2xl text-gray-600">
+              Selected work combining software development, electronics, and embedded systems.
+            </p>
+            <div
+              id="projects-grid"
+              class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+              aria-live="polite"
+            ></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="resume" class="section-spacing">
+        <div class="mx-auto max-w-6xl px-6 lg:px-8">
+          <div class="reveal rounded-2xl border border-gray-200 bg-white p-8 shadow-soft sm:p-10">
+            <h2 class="section-title">Resume</h2>
+            <p class="mt-4 max-w-2xl text-gray-600">
+              Download a concise overview of my education, technical experience, and project work.
+            </p>
+            <a
+              href="#"
+              class="mt-8 inline-flex items-center rounded-full border border-gray-900 px-6 py-3 text-sm font-semibold text-gray-900 transition hover:-translate-y-0.5 hover:bg-gray-900 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
+              aria-label="Download resume"
+            >
+              Download Resume
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section-spacing bg-gray-50">
+        <div class="mx-auto max-w-6xl px-6 lg:px-8">
+          <div class="reveal">
+            <h2 class="section-title">Contact</h2>
+            <p class="mt-4 text-gray-600">
+              Open to internships, collaboration, and engineering opportunities.
+            </p>
+            <ul class="mt-8 space-y-4 text-gray-700">
+              <li>
+                <span class="font-semibold">Email:</span>
+                <a class="link" href="mailto:your.email@example.com">your.email@example.com</a>
+              </li>
+              <li>
+                <span class="font-semibold">GitHub:</span>
+                <a class="link" href="https://github.com/yourusername" target="_blank" rel="noreferrer">
+                  github.com/yourusername
+                </a>
+              </li>
+              <li>
+                <span class="font-semibold">LinkedIn:</span>
+                <a
+                  class="link"
+                  href="https://linkedin.com/in/yourusername"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  linkedin.com/in/yourusername
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-gray-200 bg-white">
+      <div class="mx-auto max-w-6xl px-6 py-6 text-center text-sm text-gray-500 lg:px-8">
+        &copy; <span id="year"></span> Your Name. All rights reserved.
+      </div>
+    </footer>
+
+    <script src="./data/projects.js"></script>
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>
