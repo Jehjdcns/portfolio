@@ -1,49 +1,60 @@
 const projects = [
   {
-    title: "Smart Home Energy Monitor",
+    title: "Point of Sales System for Colegio de Muntinlupa Canteen",
     description:
-      "A low-cost monitoring system that tracks appliance consumption in real time and displays usage patterns for energy optimization.",
-    tech: ["Arduino", "C", "MATLAB"],
+      "Developed a point of sales system to streamline canteen transactions, sales tracking, and basic inventory flow for daily operations.",
+    tech: ["Java", "Database", "UI/UX"],
     image: "./assets/images/placeholder.svg",
     link: "#",
   },
   {
-    title: "Autonomous Line Follower",
+    title: "Contactless Doorbell Using 555 Timer and CD4017",
     description:
-      "Built and tuned a robotic platform with sensor fusion and control logic for reliable line tracking across variable lighting conditions.",
-    tech: ["C", "Sensors", "Circuit Design"],
+      "Built a contactless doorbell prototype using timer and counter ICs to trigger a chime sequence without physical switch interaction.",
+    tech: ["Electronics", "555 Timer", "CD4017"],
     image: "./assets/images/placeholder.svg",
     link: "#",
   },
   {
-    title: "Embedded Attendance System",
+    title: "Remote Notification Control Parking Management",
     description:
-      "Designed an embedded prototype for attendance automation with modular firmware and serial data integration.",
-    tech: ["Verilog", "Arduino", "Git"],
+      "Created a remote notification concept to reduce lapses in parking compliance by alerting users and managers about parking events.",
+    tech: ["Embedded Systems", "Sensors", "Control Logic"],
     image: "./assets/images/placeholder.svg",
     link: "#",
   },
   {
-    title: "Signal Processing Visualizer",
+    title:
+      "Optimization of Recycled Paper Strength Using Design of Experiments",
     description:
-      "Interactive signal-processing exercises and visual outputs to compare filtering techniques and waveform behavior.",
-    tech: ["MATLAB", "Java", "Git"],
+      "Investigated how oven drying time, paper type, and additives affect recycled paper strength using a structured experimental approach.",
+    tech: ["Design of Experiments", "Data Analysis", "Research"],
     image: "./assets/images/placeholder.svg",
     link: "#",
   },
   {
-    title: "IoT Environmental Logger",
+    title: "Small Signal Amplifier (BJT)",
     description:
-      "A compact data logger that captures and stores environmental parameters for trend analysis in lab and field settings.",
-    tech: ["Arduino", "Sensors", "C#"],
+      "Designed and evaluated a BJT small-signal amplifier circuit focusing on gain behavior, signal fidelity, and stable biasing.",
+    tech: ["Analog Electronics", "BJT", "Circuit Design"],
     image: "./assets/images/placeholder.svg",
     link: "#",
   },
   {
-    title: "Digital Logic Simulator",
+    title:
+      "AlgaClear: AI-Integrated Satellite and Smart Buoy System for Harmful Algal Blooms",
     description:
-      "Implemented a simulator for core logic circuits to validate gate-level designs and support coursework experimentation.",
-    tech: ["Verilog", "Java", "Proteus"],
+      "Proposed an integrated monitoring and prediction framework using satellite inputs, smart buoys, and AI for early bloom detection in Laguna de Bay.",
+    tech: ["AI", "IoT", "Environmental Monitoring"],
+    image: "./assets/images/placeholder.svg",
+    link: "#",
+  },
+  {
+    title:
+      "Design and Evaluation of a Citation-Grounded Hallucination Detection Framework",
+    description:
+      "Designed and evaluated a framework to detect hallucinations in ChatGPT responses by validating claims against citation-grounded evidence.",
+    tech: ["NLP", "LLM Evaluation", "Research"],
     image: "./assets/images/placeholder.svg",
     link: "#",
   },

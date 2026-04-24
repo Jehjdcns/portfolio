@@ -7,6 +7,7 @@ const header = document.getElementById("site-header");
 const menuToggle = document.getElementById("menu-toggle");
 const mobileMenu = document.getElementById("mobile-menu");
 const yearEl = document.getElementById("year");
+const themeToggle = document.getElementById("theme-toggle");
 
 function renderProjects() {
   if (!projectsGrid || !Array.isArray(projects)) return;
@@ -126,9 +127,34 @@ function setCurrentYear() {
   }
 }
 
+function applyTheme(theme) {
+  const isDark = theme === "dark";
+  document.body.classList.toggle("dark-theme", isDark);
+  if (themeToggle) {
+    themeToggle.textContent = isDark ? "Day Mode" : "Dark Mode";
+    themeToggle.setAttribute("aria-pressed", String(isDark));
+  }
+}
+
+function setupThemeToggle() {
+  if (!themeToggle) return;
+
+  const savedTheme = localStorage.getItem("portfolio-theme");
+  const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const initialTheme = savedTheme || (systemPrefersDark ? "dark" : "light");
+  applyTheme(initialTheme);
+
+  themeToggle.addEventListener("click", () => {
+    const nextTheme = document.body.classList.contains("dark-theme") ? "light" : "dark";
+    applyTheme(nextTheme);
+    localStorage.setItem("portfolio-theme", nextTheme);
+  });
+}
+
 renderProjects();
 setupSmoothScroll();
 setupMobileMenu();
+setupThemeToggle();
 revealOnScroll();
 setCurrentYear();
 updateActiveNav();

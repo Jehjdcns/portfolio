@@ -14,7 +14,9 @@
         theme: {
           extend: {
             colors: {
-              accent: "#4f46e5",
+              primary: "#9CAF88",
+              secondary: "#4A5D4E",
+              accent: "#C8B38E",
             },
             boxShadow: {
               soft: "0 10px 30px rgba(17, 24, 39, 0.08)",
@@ -30,34 +32,40 @@
       id="site-header"
       class="fixed top-0 left-0 right-0 z-50 border-b border-transparent bg-white/80 backdrop-blur-sm transition-all duration-300"
     >
-      <nav
-        class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-8"
-        aria-label="Main navigation"
-      >
+      <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-8" aria-label="Main navigation">
         <a href="#home" class="text-lg font-semibold tracking-tight">Claire T. Lanosnia</a>
-        <button
-          id="menu-toggle"
-          class="inline-flex items-center justify-center rounded-md border border-gray-300 p-2 text-gray-700 md:hidden"
-          aria-label="Toggle menu"
-          aria-expanded="false"
-        >
-          <span class="sr-only">Open main menu</span>
-          <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path
-              fill-rule="evenodd"
-              d="M3 4.75A.75.75 0 013.75 4h12.5a.75.75 0 010 1.5H3.75A.75.75 0 013 4.75zm0 5A.75.75 0 013.75 9h12.5a.75.75 0 010 1.5H3.75A.75.75 0 013 9.75zm0 5a.75.75 0 01.75-.75h12.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
-              clip-rule="evenodd"
-            />
-          </svg>
-        </button>
-        <ul id="nav-menu" class="hidden items-center gap-8 text-sm font-medium md:flex">
-          <li><a class="nav-link" href="#home">Home</a></li>
-          <li><a class="nav-link" href="#about">About</a></li>
-          <li><a class="nav-link" href="#skills">Skills</a></li>
-          <li><a class="nav-link" href="#projects">Projects</a></li>
-          <li><a class="nav-link" href="#resume">Resume</a></li>
-          <li><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
+        <div class="flex items-center gap-3">
+          <ul id="nav-menu" class="hidden items-center gap-8 text-sm font-medium md:flex">
+            <li><a class="nav-link" href="#home">Home</a></li>
+            <li><a class="nav-link" href="#about">About</a></li>
+            <li><a class="nav-link" href="#skills">Skills</a></li>
+            <li><a class="nav-link" href="#projects">Projects</a></li>
+            <li><a class="nav-link" href="#resume">Resume</a></li>
+            <li><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+          <button
+            id="theme-toggle"
+            class="inline-flex items-center justify-center rounded-md border border-gray-300 px-3 py-2 text-xs font-semibold text-gray-700 transition hover:border-accent hover:text-secondary"
+            aria-label="Toggle theme"
+          >
+            Dark Mode
+          </button>
+          <button
+            id="menu-toggle"
+            class="inline-flex items-center justify-center rounded-md border border-gray-300 p-2 text-gray-700 md:hidden"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path
+                fill-rule="evenodd"
+                d="M3 4.75A.75.75 0 013.75 4h12.5a.75.75 0 010 1.5H3.75A.75.75 0 013 4.75zm0 5A.75.75 0 013.75 9h12.5a.75.75 0 010 1.5H3.75A.75.75 0 013 9.75zm0 5a.75.75 0 01.75-.75h12.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
       </nav>
       <div id="mobile-menu" class="hidden border-t border-gray-200 bg-white md:hidden">
         <ul class="space-y-1 px-6 py-3 text-sm font-medium">
@@ -211,11 +219,11 @@
                 <span class="font-semibold">LinkedIn:</span>
                 <a
                   class="link"
-                  href="#"
+                  href="https://www.linkedin.com/in/claire-lanosnia-8332b23b4"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Add your LinkedIn profile URL
+                  linkedin.com/in/claire-lanosnia-8332b23b4
                 </a>
               </li>
             </ul>

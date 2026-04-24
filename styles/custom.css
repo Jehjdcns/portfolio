@@ -2,9 +2,35 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  --color-primary: #9caf88;
+  --color-secondary: #4a5d4e;
+  --color-background: #faf7f2;
+  --color-surface: #f3ede3;
+  --color-surface-strong: #efe5d7;
+  --color-text: #333333;
+  --color-accent: #c8b38e;
+  --color-border: #d9cfbf;
+  --color-link: #4a5d4e;
+}
+
+body.dark-theme {
+  --color-primary: #8a9a7d;
+  --color-secondary: #d6ddcf;
+  --color-background: #1f2320;
+  --color-surface: #2b312d;
+  --color-surface-strong: #364038;
+  --color-text: #f5f2ec;
+  --color-accent: #c8b38e;
+  --color-border: #4a5d4e;
+  --color-link: #c8b38e;
+}
+
 body {
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
     sans-serif;
+  background: var(--color-background);
+  color: var(--color-text);
 }
 
 .section-spacing {
@@ -20,23 +46,23 @@ body {
 }
 
 .nav-link {
-  color: #374151;
+  color: var(--color-text);
   transition: color 180ms ease;
 }
 
 .nav-link:hover {
-  color: #111827;
+  color: var(--color-secondary);
 }
 
 .active-link {
-  color: #4f46e5;
+  color: var(--color-secondary);
 }
 
 .skill-card {
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--color-border);
   border-radius: 1rem;
   padding: 1.5rem;
-  background: #ffffff;
+  background: var(--color-surface);
   box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
   transition: transform 220ms ease, box-shadow 220ms ease;
 }
@@ -50,13 +76,13 @@ body {
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-weight: 600;
-  color: #111827;
+  color: var(--color-text);
 }
 
 .skill-pill {
   border-radius: 9999px;
-  background: #f3f4f6;
-  color: #374151;
+  background: var(--color-surface-strong);
+  color: var(--color-text);
   font-size: 0.75rem;
   line-height: 1rem;
   font-weight: 600;
@@ -64,12 +90,65 @@ body {
 }
 
 .link {
-  color: #4f46e5;
+  color: var(--color-link);
   text-decoration: none;
 }
 
 .link:hover {
-  color: #111827;
+  color: var(--color-accent);
+}
+
+.bg-white {
+  background-color: var(--color-background) !important;
+}
+
+.bg-white\/80 {
+  background-color: color-mix(in srgb, var(--color-background) 88%, transparent) !important;
+}
+
+.bg-gray-50 {
+  background-color: var(--color-surface) !important;
+}
+
+.text-gray-900,
+.text-gray-700,
+.text-gray-600,
+.text-gray-500 {
+  color: var(--color-text) !important;
+}
+
+.border-gray-200,
+.border-gray-300 {
+  border-color: var(--color-border) !important;
+}
+
+.bg-gray-900 {
+  background-color: var(--color-secondary) !important;
+}
+
+.hover\:bg-gray-900:hover {
+  background-color: var(--color-secondary) !important;
+}
+
+.text-white {
+  color: #fffdf9 !important;
+}
+
+.hover\:text-white:hover {
+  color: #fffdf9 !important;
+}
+
+.hover\:bg-accent:hover {
+  background-color: var(--color-accent) !important;
+  color: var(--color-text) !important;
+}
+
+.text-accent {
+  color: var(--color-accent) !important;
+}
+
+.hover\:text-gray-900:hover {
+  color: var(--color-secondary) !important;
 }
 
 .reveal {
