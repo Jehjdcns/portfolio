@@ -160,18 +160,62 @@ git push -u origin main
 
 ## Deploy To Vercel
 
-This project includes `vercel.json` for static routing.
+This project includes `vercel.json` for static routing and is ready for static deployment.
 
-### Deploy from GitHub (recommended)
+### Option A: Deploy from GitHub (recommended)
 
-1. Push code to GitHub.
-2. Go to [Vercel](https://vercel.com/).
-3. Click **Add New Project**.
-4. Import your `Jehjdcns/portfolio` repository.
-5. Framework preset: **Other** (or auto-detected static).
-6. Build command: *(leave empty)*.
-7. Output directory: *(leave empty)*.
-8. Click **Deploy**.
+1. Push your project to GitHub:
+   - [https://github.com/Jehjdcns/portfolio.git](https://github.com/Jehjdcns/portfolio.git)
+2. Sign in to [Vercel](https://vercel.com/).
+3. Click **Add New...** -> **Project**.
+4. Import the `Jehjdcns/portfolio` repository.
+5. In project settings:
+   - Framework Preset: **Other** (or auto-detected static)
+   - Build Command: leave empty
+   - Output Directory: leave empty
+6. Click **Deploy**.
+7. After deployment, open the generated Vercel URL and test:
+   - Navbar and smooth scrolling
+   - Project cards rendering
+   - Links and responsive layout
+
+### Option B: Deploy using Vercel CLI
+
+1. Install Vercel CLI globally:
+
+```bash
+npm i -g vercel
+```
+
+2. Login to Vercel:
+
+```bash
+vercel login
+```
+
+3. From the project root, run:
+
+```bash
+vercel
+```
+
+4. Follow prompts:
+   - Set up and deploy: **Y**
+   - Scope: choose your account
+   - Link to existing project: **N** (first time)
+   - Project name: `portfolio` (or your preferred name)
+   - Directory: `./`
+
+5. For production deployment:
+
+```bash
+vercel --prod
+```
+
+### Redeploy after updates
+
+- If using GitHub integration: push to `main` and Vercel auto-deploys.
+- If using CLI: run `vercel --prod` again from project root.
 
 ---
 
