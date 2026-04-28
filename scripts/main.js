@@ -36,6 +36,7 @@ function renderProjects() {
           <a
             href="${project.link}"
             class="inline-flex items-center text-sm font-semibold text-accent transition hover:text-gray-900"
+
           </a>
         </div>
       </article>
